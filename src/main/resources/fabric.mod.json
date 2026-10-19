@@ -3,6 +3,7 @@
   "id": "gtamine_visual",
   "version": "${version}",
   "name": "GTAMINE Visual",
+  "icon": "assets/gtamine_visual/icon.png",
   "description": "Визуальный мод, улучшающий игру на сервере GTAMINE RolePlay.",
   "authors": ["GTAMINE Team", "HolJake"],
   "contact": { "homepage": "https://gtamine.com" },
