@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "gtamine_visual",
+  "version": "${version}",
+  "name": "GTAMINE Visual",
+  "description": "Визуальный мод, улучшающий игру на сервере GTAMINE RolePlay.",
+  "authors": ["GTAMINE Team", "HolJake"],
+  "contact": { "homepage": "https://gtamine.com" },
+  "environment": "client",
+  "entrypoints": { "client": ["com.gtamine.visual.GtamineVisualClient"] },
+  "mixins": ["gtamine_visual.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": ">=0.141.6+1.21.11"
+  }
+}
