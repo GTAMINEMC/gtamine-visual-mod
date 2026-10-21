@@ -4,6 +4,7 @@ import com.gtamine.visual.module.ModuleManager;
 import com.gtamine.visual.editor.InterfaceEditorModule;
 import com.gtamine.visual.presence.PresenceModule;
 import com.gtamine.visual.server.ServerDomainPolicy;
+import com.gtamine.visual.update.AutoUpdater;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import net.minecraft.client.network.ServerInfo;
@@ -19,6 +20,7 @@ public final class GtamineVisualClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        new AutoUpdater().start();
         ModuleManager modules = new ModuleManager(List.of(new InterfaceEditorModule(), new PresenceModule()));
         ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
             ServerInfo server = client.getCurrentServerEntry();
